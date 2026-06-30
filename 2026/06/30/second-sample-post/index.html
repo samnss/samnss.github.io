@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Samwise&#39;s Savepoint</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="这是一篇用于测试多篇文章场景的样例文档. 主要观察首页列表, 归档页, 分类页, 标签页, 上一篇和下一篇导航的展示效果.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="第二篇样例文档 - 多文章列表测试">
+<meta property="og:url" content="https://savepoint.tech/2026/06/30/second-sample-post/index.html">
+<meta property="og:site_name" content="Samwise&#39;s Savepoint">
+<meta property="og:description" content="这是一篇用于测试多篇文章场景的样例文档. 主要观察首页列表, 归档页, 分类页, 标签页, 上一篇和下一篇导航的展示效果.">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-06-30T03:06:00.000Z">
+<meta property="article:modified_time" content="2026-06-30T03:08:13.146Z">
+<meta property="article:author" content="savepoint.tech">
+<meta name="twitter:card" content="summary">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+
+<meta name="generator" content="Hexo 8.1.2"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Samwise&#39;s Savepoint</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+        <a class="nav-icon nav-search-btn" title="搜索"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://savepoint.tech"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-second-sample-post" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2026/06/30/second-sample-post/" class="article-date">
+  <time class="dt-published" datetime="2026-06-30T03:06:00.000Z" itemprop="datePublished">2026-06-30</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/testtext/">testtext</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      第二篇样例文档 - 多文章列表测试
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>这是一篇用于测试多篇文章场景的样例文档. 主要观察首页列表, 归档页, 分类页, 标签页, 上一篇和下一篇导航的展示效果.</p>
+<span id="more"></span>
+
+<h2 id="1-场景说明"><a href="#1-场景说明" class="headerlink" title="1. 场景说明"></a>1. 场景说明</h2><p>当博客中存在多篇文章时, 需要确认以下页面是否展示正常:</p>
+<ul>
+<li>首页文章列表</li>
+<li>归档页面</li>
+<li>分类页面</li>
+<li>标签页面</li>
+<li>文章详情页底部导航</li>
+</ul>
+<h2 id="2-数据库巡检清单"><a href="#2-数据库巡检清单" class="headerlink" title="2. 数据库巡检清单"></a>2. 数据库巡检清单</h2><table>
+<thead>
+<tr>
+<th>检查项</th>
+<th>示例命令</th>
+<th>关注点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>连接数</td>
+<td><code>SHOW STATUS LIKE &#39;Threads_connected&#39;;</code></td>
+<td>是否接近上限</td>
+</tr>
+<tr>
+<td>慢查询</td>
+<td><code>SHOW GLOBAL STATUS LIKE &#39;Slow_queries&#39;;</code></td>
+<td>是否持续增长</td>
+</tr>
+<tr>
+<td>锁等待</td>
+<td><code>SHOW ENGINE INNODB STATUS\G</code></td>
+<td>是否存在长时间等待</td>
+</tr>
+<tr>
+<td>复制延迟</td>
+<td><code>SHOW SLAVE STATUS\G</code></td>
+<td>延迟秒数和错误信息</td>
+</tr>
+</tbody></table>
+<h2 id="3-SQL-示例"><a href="#3-SQL-示例" class="headerlink" title="3. SQL 示例"></a>3. SQL 示例</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span></span><br><span class="line">  table_schema,</span><br><span class="line">  table_name,</span><br><span class="line">  ROUND((data_length <span class="operator">+</span> index_length) <span class="operator">/</span> <span class="number">1024</span> <span class="operator">/</span> <span class="number">1024</span>, <span class="number">2</span>) <span class="keyword">AS</span> size_mb</span><br><span class="line"><span class="keyword">FROM</span> information_schema.tables</span><br><span class="line"><span class="keyword">WHERE</span> table_schema <span class="keyword">NOT</span> <span class="keyword">IN</span> (<span class="string">&#x27;mysql&#x27;</span>, <span class="string">&#x27;sys&#x27;</span>, <span class="string">&#x27;performance_schema&#x27;</span>, <span class="string">&#x27;information_schema&#x27;</span>)</span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> size_mb <span class="keyword">DESC</span></span><br><span class="line">LIMIT <span class="number">10</span>;</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-运维命令示例"><a href="#4-运维命令示例" class="headerlink" title="4. 运维命令示例"></a>4. 运维命令示例</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">df</span> -h</span><br><span class="line">free -m</span><br><span class="line"><span class="built_in">uptime</span></span><br><span class="line">journalctl -u mysqld --since <span class="string">&quot;1 hour ago&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="5-简单结论模板"><a href="#5-简单结论模板" class="headerlink" title="5. 简单结论模板"></a>5. 简单结论模板</h2><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Issue:</span><br><span class="line">  Database CPU usage increased during the target time window.</span><br><span class="line"></span><br><span class="line">Evidence:</span><br><span class="line">  Slow queries increased and active sessions were concentrated on one table.</span><br><span class="line"></span><br><span class="line">Suggestion:</span><br><span class="line">  Review the query plan, add a suitable index, and avoid full table scans.</span><br></pre></td></tr></table></figure>
+
+<h2 id="6-总结"><a href="#6-总结" class="headerlink" title="6. 总结"></a>6. 总结</h2><p>这篇文章用于验证多文章列表和文章间导航. 如果首页可以同时看到两篇文章, 则说明基础博客发布流程已经正常.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://savepoint.tech/2026/06/30/second-sample-post/" data-id="cuidp6MF3gu1BUnWNAk7aqFNE" data-title="第二篇样例文档 - 多文章列表测试" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2026/06/25/tech-markdown-render-test/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">Markdown 渲染能力测试</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      2026 savepoint.tech
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
