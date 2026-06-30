@@ -1251,12 +1251,12 @@ pre .javascript .function {
   margin: 50px 0;
 }
 .widget {
-  color: #777;
-  text-shadow: 0 1px #fff;
-  background: #ddd;
-  -webkit-box-shadow: 0 -1px 4px #ccc inset;
-  box-shadow: 0 -1px 4px #ccc inset;
-  border: 1px solid #ccc;
+  color: #555;
+  text-shadow: none;
+  background: #fff;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: 1px solid #ddd;
   padding: 15px;
   border-radius: 3px;
 }
